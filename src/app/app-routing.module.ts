@@ -8,17 +8,22 @@ import { ArtistUpdateComponent } from './artist-update/artist-update.component';
 
 
 const routes: Routes = [
-  { path: '', component: ArtistsComponent },  
-  {
+    { path: '', component: ArtistListComponent },    
+    {
     path: 'artist',
     component: ArtistsComponent,
-    children: [
-      { path: '', component: ArtistListComponent },
-      { path: 'create', component: ArtistCreateComponent },
-      { path: 'delete', component: ArtistDeleteComponent },
-      { path: 'update', component: ArtistUpdateComponent },
-    ]
-  }
+    // children: [
+    //   { path: '', component: ArtistListComponent },
+    //   { path: 'create', component: ArtistCreateComponent },
+    //   { path: 'delete/:id', component: ArtistDeleteComponent },
+    //   { path: 'update/:id', component: ArtistUpdateComponent },
+    // ]
+  },
+  { path: 'artist/create', component: ArtistCreateComponent },
+  { path: 'artist/update/:id', component: ArtistUpdateComponent },
+  { path: 'artist/delete/:id', component: ArtistDeleteComponent },
+  
+  
 ];
 
 @NgModule({

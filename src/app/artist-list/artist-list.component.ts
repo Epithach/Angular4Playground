@@ -13,13 +13,17 @@ export class ArtistListComponent implements OnInit {
 
   artists: Artist[];
 
-  constructor(private artistService: ArtistService) { }
+  constructor(private artistService: ArtistService) {
+   }
 
   ngOnInit() {
-  }
+    console.log("1");
+      this.artists = this.getAllArtist();
+    }
 
-  getAllArtist() {
-    this.artistService.getAllArtist();
+  getAllArtist(): Artist[] {
+    console.log("2");
+    return this.artistService.getAllArtist();
   }
 
   getArtistsByMusicType(value: number) {

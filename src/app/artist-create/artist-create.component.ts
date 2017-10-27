@@ -1,3 +1,4 @@
+import {Route} from '@angular/router';
 import {ArtistService} from '../artist.service';
 import {Artist} from '../shared/Artist';
 import { Component, OnInit } from '@angular/core';
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistCreateComponent implements OnInit {
 
-  constructor(private artistService: ArtistService) { }
+  constructor(private artistService: ArtistService) {
+    console.log("test");
+   }
 
   ngOnInit() {
   }

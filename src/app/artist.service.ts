@@ -9,7 +9,12 @@ export class ArtistService {
     artistUrl = ""; // Url vers l'api
     artistlist = Artists;
 
-    constructor(private http: Http) { }
+    constructor(private http: Http) {
+
+        (this.artistlist).forEach(element => {
+            console.log("salut");
+        });
+     }
     
     getAllArtist() {
         return this.artistlist;
